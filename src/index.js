@@ -11,10 +11,10 @@ const date = {
     format: 'DD-MM-YYYY HH:mm:ss'
 }
 const data = {
-    name: 'Héctor Gerardo Fuentes Gaete',
-    //name: 'Geraldine del Carmen Morales Castro',
+    //name: 'Héctor Gerardo Fuentes Gaete',
+    name: 'Geraldine del Carmen Morales Castro',
     rut: '16877775-2',
-    outputFile: 'output.pdf',
+    outputFile: 'geraldine.pdf',
     destino: 'La Florida',
     broadcast: moment(new Date(
         date.year,
