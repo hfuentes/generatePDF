@@ -6,11 +6,15 @@ const fs = require('fs')
 const moment = require('moment')
 
 const date = {
-    year: 2020, month: 7, day: 13,
-    hour: 11, min: 21, seg: 55,
+    year: 2020, month: 10, day: 4,
+    hour: 14, min: 1, seg: 55,
     format: 'DD-MM-YYYY HH:mm:ss'
 }
 const data = {
+    name: 'Héctor Gerardo Fuentes Gaete',
+    //name: 'Geraldine del Carmen Morales Castro',
+    rut: '16877775-2',
+    outputFile: 'output.pdf',
     broadcast: moment(new Date(
         date.year,
         date.month - 1,
@@ -34,8 +38,7 @@ const data = {
         date.hour,
         date.min,
         date.seg
-    )).format(date.format),
-    outputFile: 'output.pdf'
+    )).format(date.format)
 }
 
 async function main(data) {
@@ -84,6 +87,34 @@ async function main(data) {
         size: 6.7,
         font: helveticaFont,
         color: rgb(0, 0.45, 0.16)
+    })
+    firstPage.drawRectangle({
+        x: 85,
+        y: 330,
+        width: 200,
+        height: 10,
+        color: rgb(1, 1, 1)
+    })
+    firstPage.drawText(data.name, {
+        x: 88.5,
+        y: 332,
+        size: 5.5,
+        font: helveticaFont,
+        color: rgb(0, 0, 0)
+    })
+    firstPage.drawRectangle({
+        x: 85,
+        y: 320,
+        width: 200,
+        height: 10,
+        color: rgb(1, 1, 1)
+    })
+    firstPage.drawText(data.rut, {
+        x: 88.5,
+        y: 320,
+        size: 5.5,
+        font: helveticaFont,
+        color: rgb(0, 0, 0)
     })
     const pdfBytes = await pdfDoc.save()
     fs.writeFileSync('./src/templates/' + data.outputFile, pdfBytes)
