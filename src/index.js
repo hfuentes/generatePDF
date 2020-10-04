@@ -15,6 +15,7 @@ const data = {
     //name: 'Geraldine del Carmen Morales Castro',
     rut: '16877775-2',
     outputFile: 'output.pdf',
+    destino: 'La Florida',
     broadcast: moment(new Date(
         date.year,
         date.month - 1,
@@ -112,6 +113,20 @@ async function main(data) {
     firstPage.drawText(data.rut, {
         x: 88.5,
         y: 320,
+        size: 5.5,
+        font: helveticaFont,
+        color: rgb(0, 0, 0)
+    })
+    firstPage.drawRectangle({
+        x: 85,
+        y: 200,
+        width: 200,
+        height: 10,
+        color: rgb(1, 1, 1)
+    })
+    firstPage.drawText(data.destino, {
+        x: 88.5,
+        y: 201.5,
         size: 5.5,
         font: helveticaFont,
         color: rgb(0, 0, 0)
