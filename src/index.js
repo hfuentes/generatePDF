@@ -15,7 +15,7 @@ const data = {
     name: 'Geraldine del Carmen Morales Castro',
     rut: '16877775-2',
     outputFile: 'geraldine.pdf',
-    destino: 'La Florida',
+    destino: 'Cerrillo',
     broadcast: moment(new Date(
         date.year,
         date.month - 1,
