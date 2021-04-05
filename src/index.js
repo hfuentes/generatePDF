@@ -6,16 +6,18 @@ const fs = require('fs')
 const moment = require('moment')
 
 const date = {
-    year: 2020, month: 10, day: 4,
-    hour: 14, min: 1, seg: 55,
+    year: 2021, month: 2, day: 20,
+    hour: 20, min: 7, seg: 55,
     format: 'DD-MM-YYYY HH:mm:ss'
 }
 const data = {
-    //name: 'Héctor Gerardo Fuentes Gaete',
+    // name: 'Héctor Gerardo Fuentes Gaete',
+    // rut: '16748540-5',
+    // outputFile: 'cerrillos_hector_' + date.year + date.month + date.day + date.hour + date.min + date.seg + '.pdf',
     name: 'Geraldine del Carmen Morales Castro',
     rut: '16877775-2',
-    outputFile: 'geraldine.pdf',
-    destino: 'Cerrillo',
+    outputFile: 'cerrillos_geraldine_' + date.year + date.month + date.day + date.hour + date.min + date.seg + '.pdf',
+    destino: 'El Bosque',
     broadcast: moment(new Date(
         date.year,
         date.month - 1,
